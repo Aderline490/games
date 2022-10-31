@@ -30,10 +30,14 @@ def paddle_a_up():
     y = paddle_a.ycor()
     y += 20
     paddle_a.sety(y)
-
+def paddle_a_down():
+    y = paddle_a.ycor()
+    y -= 20
+    paddle_a.sety(y)
 # Keyboard binding
 wn.listen()
 wn.onkeypress(paddle_a_up, "w")
+wn.onkeypress(paddle_a_down, "s")
 
 # Ball
 ball = turtle.Turtle()
